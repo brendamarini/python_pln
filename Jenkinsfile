@@ -44,4 +44,4 @@ pipeline {
             echo 'Pipeline falhou. Verificar logs para mais detalhes.'
         }
     }
-}
+
