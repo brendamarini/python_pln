@@ -1,16 +1,15 @@
 pipeline {
     agent {
         docker {
-            image 'devopsjourney1/myjenkinsagents:python'
-            label 'docker-agent-python' 
-            
+            image 'python:3.9' // Use a imagem oficial do Python
+            label 'docker-agent-python'
         }
     }
     stages {
         stage('Preparação do Ambiente') {
             steps {
-                
-                echo 'ja instalado'
+                // Instala as dependências
+                sh 'pip install -r requisitos.txt'
             }
         }
 
@@ -34,8 +33,20 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                sh 'python chat_bot.py'
+                sh 'python3 chat_bot.py'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline concluído.'
+        }
+        success {
+            echo 'Pipeline executado com sucesso!'
+        }
+        failure {
+            echo 'Pipeline falhou. Verificar logs para mais detalhes.'
         }
     }
 }
