@@ -1,28 +1,20 @@
 pipeline {
-    agent any
-    
-    environment {
-        DOCKER_IMAGE = 'python:3.9'
+    agent {
+        docker {
+            image 'python:3.9'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
     }
-
     stages {
         stage('Preparação do Ambiente') {
             steps {
-                script {
-                    docker.image(env.DOCKER_IMAGE).inside {
-                        sh 'pip install -r requisitos.txt'
-                    }
-                }
+                sh 'pip install -r requisitos.txt'
             }
         }
 
         stage('Execução do Teste Levenshtein') {
             steps {
-                script {
-                    docker.image(env.DOCKER_IMAGE).inside {
-                        sh 'python3 levenshtein_teste.py'
-                    }
-                }
+                sh 'python3 levenshtein_teste.py'
             }
         }
 
@@ -40,11 +32,7 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                script {
-                    docker.image(env.DOCKER_IMAGE).inside {
-                        sh 'python3 chat_bot.py'
-                    }
-                }
+                sh 'python3 chat_bot.py'
             }
         }
     }
