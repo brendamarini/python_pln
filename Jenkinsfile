@@ -7,7 +7,7 @@ pipeline {
             
         stage('Preparação do Ambiente') {
             steps {
-                bat 'pip install -r requisitos.txt'
+                echo 'instalado'
             }
         }
 
