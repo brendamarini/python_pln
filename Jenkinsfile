@@ -1,65 +1,51 @@
 pipeline {
     agent any
-    stages {
-        stage('Checkout SCM') {
+    environment{
+        PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
+    stages {('Checkout SCM') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/brendamarini/python_pln']]])
             }
-        }
         stage('Preparação do Ambiente') {
             steps {
-                echo 'Instalando virtualenv...'
-                script {
-                    if (isUnix()) {
-                        sh '''
-                            python -m venv venv
-                            source venv/bin/activate
-                            pip install -r requisitos.txt
-                        '''
-                    } else {
-                        bat '''
-                            python -m venv venv
-                            venv\\Scripts\\activate
-                            pip install -r requisitos.txt
-                        '''
-                    }
-                }
+                bat 'pip install -r requisitos.txt'
             }
         }
+
         stage('Execução do Teste Levenshtein') {
             steps {
+                bat 'python levenshtein_teste.py'
+            }
+        }
+
+        stage('Verificação do Arquivo de Perguntas') {
+            steps {
                 script {
-                    if (isUnix()) {
-                        sh '''
-                            source venv/bin/activate
-                            python levenshtein_test.py
-                        '''
+                    if (fileExists('perguntas.txt')) {
+                        echo 'Arquivo perguntas.txt encontrado!'
                     } else {
-                        bat '''
-                            venv\\Scripts\\activate
-                            python tests\\levenshtein_test.py
-                        '''
+                        error('Arquivo perguntas.txt não encontrado. Interrompendo o pipeline.')
                     }
                 }
             }
         }
-        stage('Verificação do Arquivo de Perguntas') {
-            steps {
-                echo 'Verificação do Arquivo de Perguntas'
-            }
-        }
+
         stage('Execução do Chatbot') {
             steps {
-                echo 'Execução do Chatbot'
+                bat 'python chat_bot.py'
             }
         }
     }
+
     post {
-        failure {
-            echo 'Pipeline falhou.'
+        always {
+            echo 'Pipeline concluído.'
         }
         success {
-            echo 'Pipeline executado com sucesso.'
+            echo 'Pipeline executado com sucesso!'
+        }
+        failure {
+            echo 'Pipeline falhou. Verificar logs para mais detalhes.'
         }
     }
 }
