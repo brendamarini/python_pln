@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    environment{
-        PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
-    }
+    
     stages {
             
         stage('Preparação do Ambiente') {
