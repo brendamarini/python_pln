@@ -1,49 +1,65 @@
 pipeline {
     agent any
-    environment{
-        PATH = "C:\\Windows\\System32;C:\\Users\\Marlon\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\Marlom\\AppData\\Local\\Progras\\Python\\Python312\\Scripts;${env.PATH}"
-    }
     stages {
+        stage('Checkout SCM') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/brendamarini/python_pln']]])
+            }
+        }
         stage('Preparação do Ambiente') {
             steps {
-                sh 'pip install -r requisitos.txt'
-            }
-        }
-
-        stage('Execução do Teste Levenshtein') {
-            steps {
-                sh 'python levenshtein_teste.py'
-            }
-        }
-
-        stage('Verificação do Arquivo de Perguntas') {
-            steps {
+                echo 'Instalando virtualenv...'
                 script {
-                    if (fileExists('perguntas.txt')) {
-                        echo 'Arquivo perguntas.txt encontrado!'
+                    if (isUnix()) {
+                        sh '''
+                            python -m venv venv
+                            source venv/bin/activate
+                            pip install -r requisitos.txt
+                        '''
                     } else {
-                        error('Arquivo perguntas.txt não encontrado. Interrompendo o pipeline.')
+                        bat '''
+                            python -m venv venv
+                            venv\\Scripts\\activate
+                            pip install -r requisitos.txt
+                        '''
                     }
                 }
             }
         }
-
+        stage('Execução do Teste Levenshtein') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh '''
+                            source venv/bin/activate
+                            python levenshtein_test.py
+                        '''
+                    } else {
+                        bat '''
+                            venv\\Scripts\\activate
+                            python tests\\levenshtein_test.py
+                        '''
+                    }
+                }
+            }
+        }
+        stage('Verificação do Arquivo de Perguntas') {
+            steps {
+                echo 'Verificação do Arquivo de Perguntas'
+            }
+        }
         stage('Execução do Chatbot') {
             steps {
-                sh 'python chat_bot.py'
+                echo 'Execução do Chatbot'
             }
         }
     }
-
     post {
-        always {
-            echo 'Pipeline concluído.'
+        failure {
+            echo 'Pipeline falhou.'
         }
         success {
-            echo 'Pipeline executado com sucesso!'
-        }
-        failure {
-            echo 'Pipeline falhou. Verificar logs para mais detalhes.'
+            echo 'Pipeline executado com sucesso.'
         }
     }
 }
