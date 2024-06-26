@@ -2,10 +2,9 @@ pipeline {
     agent any
     environment{
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
-    stages {('Checkout SCM') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/brendamarini/python_pln']]])
-            }
+    }
+    stages {
+            
         stage('Preparação do Ambiente') {
             steps {
                 bat 'pip install -r requisitos.txt'
