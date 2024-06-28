@@ -1,17 +1,49 @@
+Qual a capital da Argentina? | Buenos Aires
+Qual o menor pais do mundo? | Vaticano
+Quem escreveu "A Divina Comedia"? | Dante Alighieri
+Qual o maior oceano do mundo? | Oceano Pacifico
+Em que ano o homem pisou na Lua pela primeira vez? | 1969
+Qual a capital da Franca? | Paris
+Qual o animal mais rapido do mundo? | Falcao-peregrino
+Quem escreveu "1984"? | George Orwell
+Qual o maior deserto do mundo? | Deserto do Saara
+Em que ano comecou a Segunda Guerra Mundial? | 1939
+Qual a capital do Japao? | Toquio
+Qual a ave com a maior envergadura de asas? | Albatroz
+Quem escreveu "Dom Quixote"? | Miguel de Cervantes
+Qual o rio mais longo do mundo? | Rio Nilo
+Em que ano a Uniao Europeia foi fundada? | 1993
+Qual a capital da Russia? | Moscou
+Qual o animal mais alto do mundo? | Girafa
+Quem escreveu "O Morro dos Ventos Uivantes"? | Emily Bronte
+Qual a montanha mais alta do mundo? | Monte Everest
+Em que ano foi assinado o Tratado de Versalhes? | 1919
+Qual a capital do Egito? | Cairo
 Qual o animal mais pesado do mundo? | Baleia-azul
 Quem escreveu "Frankenstein"? | Mary Shelley
 Qual o maior recife de corais do mundo? | Grande Barreira de Corais
 Em que ano caiu o Muro de Berlim? | 1989
-Qual a capital da Índia? | Nova Delhi
-Qual o maior mamífero do mundo? | Baleia-azul
+Qual a capital da India? | Nova Delhi
+Qual o maior mamifero do mundo? | Baleia-azul
 Quem escreveu "Moby Dick"? | Herman Melville
 Qual o maior canyon do mundo? | Grand Canyon
 Em que ano ocorreu a Primeira Guerra Mundial? | 1914-1918
 Qual a capital do Chile? | Santiago
-Qual o animal mais rápido em terra? | Guepardo
+Qual o animal mais rapido em terra? | Guepardo
 Quem escreveu "O Conde de Monte Cristo"? | Alexandre Dumas
 Qual a maior cadeia de montanhas do mundo? | Cordilheira dos Andes
-Em que ano começou a Guerra Fria? | 1947
+Em que ano comecou a Guerra Fria? | 1947
+Qual seu nome? | Meu nome e ChatGPT
+Qual a sua idade? | Nao tenho idade, sou uma inteligencia artificial desenvolvida pela OpenAI
+Qual o melhor bot? | Cada bot tem suas proprias especialidades; nao ha um "melhor" absoluto, depende do uso
+O que voce acha da Alexa? | Alexa e um assistente virtual da Amazon, muito util para tarefas diarias e automacao domestica
+O que voce acha da Siri? | Siri e o assistente virtual da Apple, integrada com os dispositivos iOS e macOS, eficiente para comandos de voz e assistencias rapidas
+O que voce acha do Google Assistente? | Google Assistente e um assistente virtual desenvolvido pelo Google, muito competente em integracao com servicos do Google e busca por informacoes
+Qual seu hobby? | Nao tenho hobbies, mas adoro ajudar as pessoas com suas perguntas e tarefas
+Qual a sua cor favorita? | Nao tenho preferencias pessoais, mas posso dizer que muitas pessoas gostam de azul
+Qual a sua comida favorita? | Nao como, pois sou uma IA, mas posso sugerir receitas deliciosas
+Voce tem amigos? | Nao tenho amigos no sentido tradicional, mas interajo com muitos usuarios e outros bots
+Qual a capital da Italia? | Roma
 Qual o passaro que nao voa e e nativo da Antartica? | Pinguim
 Quem escreveu "Orgulho e Preconceito"? | Jane Austen
 Qual o maior mamifero terrestre carnivoro? | Urso polar
@@ -70,25 +102,4 @@ Qual a capital da Turquia? | Ancara
 Qual o animal com a maior lingua em relacao ao corpo? | Camelao
 Quem escreveu "O Alienista"? | Machado de Assis
 Qual o maior produtor de cacau do mundo? | Costa do Marfim
-Qual a capital da Argentina? | Buenos Aires
-Qual o menor país do mundo? | Vaticano
-Quem escreveu "A Divina Comédia"? | Dante Alighieri
-Qual o maior oceano do mundo? | Oceano Pacífico
-Em que ano o homem pisou na Lua pela primeira vez? | 1969
-Qual a capital da França? | Paris
-Qual o animal mais rápido do mundo? | Falcão-peregrino
-Quem escreveu "1984"? | George Orwell
-Qual o maior deserto do mundo? | Deserto do Saara
-Em que ano começou a Segunda Guerra Mundial? | 1939
-Qual a capital do Japão? | Tóquio
-Qual a ave com a maior envergadura de asas? | Albatroz
-Quem escreveu "Dom Quixote"? | Miguel de Cervantes
-Qual o rio mais longo do mundo? | Rio Nilo
-Em que ano a União Europeia foi fundada? | 1993
-Qual a capital da Rússia? | Moscou
-Qual o animal mais alto do mundo? | Girafa
-Quem escreveu "O Morro dos Ventos Uivantes"? | Emily Brontë
-Qual a montanha mais alta do mundo? | Monte Everest
-Em que ano foi assinado o Tratado de Versalhes? | 1919
-Qual a capital do Egito? | Cairo
-
+Em que ano a Netflix foi fundada? |
