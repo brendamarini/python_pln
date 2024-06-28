@@ -43,6 +43,25 @@ pipeline {
             }
         }
     }
+        stage('Enviar Email') {
+            steps {
+                script {
+                    def pergunta = params.Pergunte_aqui
+                    // Leitura da resposta do arquivo resposta.txt
+                    def resposta = readFile('resposta.txt').trim()
+
+                    // Envio do email com a pergunta e a resposta
+                    emailext(
+                        subject: "Pergunta e Resposta do Chatbot",
+                        body: """<p>Pergunta: ${pergunta}</p>
+                                 <p>Resposta: ${resposta}</p>""",
+                        to: 'brendalauramarini@gmail.com',
+                        mimeType: 'text/html'
+                    )
+                }
+            }
+        }
+    }
 
     post {
         always {
