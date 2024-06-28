@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    parameters {a
+    parameters {
         string(name: 'Pergunte_aqui', description: 'Insira a pergunta no campo abaixo.')
     }
 
