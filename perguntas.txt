@@ -1,3 +1,17 @@
+Qual o animal mais pesado do mundo? | Baleia-azul
+Quem escreveu "Frankenstein"? | Mary Shelley
+Qual o maior recife de corais do mundo? | Grande Barreira de Corais
+Em que ano caiu o Muro de Berlim? | 1989
+Qual a capital da Índia? | Nova Delhi
+Qual o maior mamífero do mundo? | Baleia-azul
+Quem escreveu "Moby Dick"? | Herman Melville
+Qual o maior canyon do mundo? | Grand Canyon
+Em que ano ocorreu a Primeira Guerra Mundial? | 1914-1918
+Qual a capital do Chile? | Santiago
+Qual o animal mais rápido em terra? | Guepardo
+Quem escreveu "O Conde de Monte Cristo"? | Alexandre Dumas
+Qual a maior cadeia de montanhas do mundo? | Cordilheira dos Andes
+Em que ano começou a Guerra Fria? | 1947
 Qual o passaro que nao voa e e nativo da Antartica? | Pinguim
 Quem escreveu "Orgulho e Preconceito"? | Jane Austen
 Qual o maior mamifero terrestre carnivoro? | Urso polar
@@ -77,17 +91,4 @@ Quem escreveu "O Morro dos Ventos Uivantes"? | Emily Brontë
 Qual a montanha mais alta do mundo? | Monte Everest
 Em que ano foi assinado o Tratado de Versalhes? | 1919
 Qual a capital do Egito? | Cairo
-Qual o animal mais pesado do mundo? | Baleia-azul
-Quem escreveu "Frankenstein"? | Mary Shelley
-Qual o maior recife de corais do mundo? | Grande Barreira de Corais
-Em que ano caiu o Muro de Berlim? | 1989
-Qual a capital da Índia? | Nova Delhi
-Qual o maior mamífero do mundo? | Baleia-azul
-Quem escreveu "Moby Dick"? | Herman Melville
-Qual o maior canyon do mundo? | Grand Canyon
-Em que ano ocorreu a Primeira Guerra Mundial? | 1914-1918
-Qual a capital do Chile? | Santiago
-Qual o animal mais rápido em terra? | Guepardo
-Quem escreveu "O Conde de Monte Cristo"? | Alexandre Dumas
-Qual a maior cadeia de montanhas do mundo? | Cordilheira dos Andes
-Em que ano começou a Guerra Fria? | 1947
+
