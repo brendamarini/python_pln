@@ -5,7 +5,7 @@ pipeline {
         string(name: 'Pergunte_aqui', description: 'Insira a pergunta no campo abaixo.')
     }
 
-    environment{
+    environment {
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
     }
 
@@ -38,19 +38,19 @@ pipeline {
             steps {
                 script {
                     def pergunta = params.Pergunte_aqui
-                    bat "python chat_bot.py \"${pergunta}\""
+                    // Modificação na execução do chatbot para salvar a resposta em resposta.txt
+                    bat "python chat_bot.py \"${pergunta}\" > resposta.txt"
                 }
             }
         }
-    }
+        
         stage('Enviar Email') {
             steps {
                 script {
                     def pergunta = params.Pergunte_aqui
-                    // Leitura da resposta do arquivo resposta.txt
                     def resposta = readFile('resposta.txt').trim()
 
-                    // Envio do email com a pergunta e a resposta
+                    
                     emailext(
                         subject: "Pergunta e Resposta do Chatbot",
                         body: """<p>Pergunta: ${pergunta}</p>
@@ -75,4 +75,5 @@ pipeline {
         }
     }
 }
-}
+
+
