@@ -5,7 +5,7 @@ pipeline {
         string(name: 'Pergunte_aqui', description: 'Insira a pergunta no campo abaixo.')
     }
 
-    environment {
+    environment{
         PATH = "C:\\Windows\\System32;C:\\windows;C:\\windows\\Scripts;${env.PATH}"
     }
 
