@@ -53,7 +53,7 @@ apipeline {
                         subject: "Pergunta e Resposta do Chatbot",
                         body: """<p>Pergunta: ${pergunta}</p>
                                  <p>Resposta: ${resposta}</p>""",
-                        to: 'brendalauramarini@gmail.com',
+                        to: 'marinibrenda5@gmail.com',
                         mimeType: 'text/html'
                     )
                 }
