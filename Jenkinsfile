@@ -38,19 +38,17 @@ pipeline {
             steps {
                 script {
                     def pergunta = params.Pergunte_aqui
-                    // Modificação na execução do chatbot para salvar a resposta em resposta.txt
                     bat "python chat_bot.py \"${pergunta}\" > resposta.txt"
                 }
             }
         }
-        
+
         stage('Enviar Email') {
             steps {
                 script {
                     def pergunta = params.Pergunte_aqui
                     def resposta = readFile('resposta.txt').trim()
 
-                    
                     emailext(
                         subject: "Pergunta e Resposta do Chatbot",
                         body: """<p>Pergunta: ${pergunta}</p>
@@ -75,5 +73,3 @@ pipeline {
         }
     }
 }
-
-
