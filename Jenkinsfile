@@ -1,4 +1,4 @@
-pipeline {
+apipeline {
     agent any
 
     parameters {
@@ -53,7 +53,7 @@ pipeline {
                         subject: "Pergunta e Resposta do Chatbot",
                         body: """<p>Pergunta: ${pergunta}</p>
                                  <p>Resposta: ${resposta}</p>""",
-                        to: 'marinibrenda5@gmail.com',
+                        to: 'brendalauramarini@gmail.com',
                         mimeType: 'text/html'
                     )
                 }
